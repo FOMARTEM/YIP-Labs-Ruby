@@ -30,9 +30,7 @@ module PartTree
             end
             corrected_strings << corrected_string
         end
-        puts "Исходные строки: #{strings}"
-        puts "Скорректированные строки: #{corrected_strings}"
-        puts "Количество корректировок: #{counter_corrected}"           
+        return [corrected_strings, counter_corrected]          
     end
 end
 
