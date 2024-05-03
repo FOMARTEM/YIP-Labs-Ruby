@@ -8,10 +8,11 @@ module PartOne
     key = 1
     loop do
       temp = ans
-      ans = 1 / (key * (key + 1) * (key + 2) * (key + 3))
+      ans += + 1.0 / (key * (key + 1) * (key + 2) * (key + 3))
       med = (temp - ans).abs
       counter += 1
       key += 1
+      #puts [temp, ans, med, counter, key, eps]
       break unless med > eps
     end
     [ans, counter]
@@ -27,7 +28,7 @@ module PartTwo
       key = 1
       loop do
         temp = ans
-        ans = 1 / (key * (key + 1) * (key + 2) * (key + 3))
+        ans += 1.0 / (key * (key + 1) * (key + 2) * (key + 3))
         med = (temp - ans).abs
         counter += 1
         key += 1
