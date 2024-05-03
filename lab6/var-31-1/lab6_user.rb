@@ -21,8 +21,8 @@ loop do
     puts "разница иераций между 1 и 2 точностью: #{res2[1] - res1[1]}"
   when '3'
     puts 'Какой-то differ'
-    puts "Значение первой производной в точках: #{PartTree.differ(0.49, 0.1, ->(x_v) {Math.sin(x_v)} )}"
-    puts "Значение второй производной в точках: #{PartTree.differ(0.49, 0.1) {|x_v| Math.tan(x_v + 1)}}"
+    puts "Значение первой производной в точках: #{PartTree.differ(0.49, 0.1, ->(x_v) { Math.sin(x_v) })}"
+    puts "Значение второй производной в точках: #{PartTree.differ(0.49, 0.1) { |x_v| Math.tan(x_v + 1) }}"
   when 'выход'
     puts 'Завершаю работу'
     break
