@@ -3,10 +3,24 @@
 module PartOne
   ALPHA = ('A'..'Z').to_a + ('a'..'z').to_a
 
-  def self.emulate(f_file, h_file)
-
+  def self.emulate(f_name, h_name)
+    f_file = File.open(f_name, 'w+')
+    h_file = File.open(h_name, 'w+')
+    create_random_file f_file
+    magic_write f_name, h_file   
+    [f_file, h_file].map(&:close)
   rescue StandardError => e
     puts "Что-то пошло не так: #{e.message}"
+  end
+
+  def self.magic_write(f_name, h_file) 
+    File.readlines(f_name).each do |line|
+      line.chars.each_with_index do |char, index|
+        if index > 0 && (line[index - 1] == "a" || line[index - 1] == "A")
+          h_file.write(char)
+        end
+      end
+    end
   end
 
   def self.create_random_file(file_name)
@@ -15,7 +29,7 @@ module PartOne
   end
 
   def self.random_word
-    (Random.new.rand(2..10).times.map { ALPHA.sample }).join
+    (Random.new.rand(3..5).times.map { ALPHA.sample }).join
   end
 end
 
@@ -66,9 +80,8 @@ end
 
 =begin
 puts 'Do PartOne'
-PartOne.emulate
-puts 'Done PartOne'
-=end
+PartOne.emulate 'f_file.txt', 'h_file.txt'
+puts "Done PartOne\n\n"
 
 puts 'Do PartTwo'
 board = PartTwo::Board.new 2, 2
@@ -76,3 +89,4 @@ puts "#{board} with area #{board.area}"
 box = PartTwo::Box.new 2, 2, 2
 puts "#{box} with volume #{box.volume}"
 puts 'Done PartTwo'
+=end
