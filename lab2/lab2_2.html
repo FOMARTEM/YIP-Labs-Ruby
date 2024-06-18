@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>
+        Lab 2.2
+    </title>
+
+    <style>
+        :root {
+            font-family: sans-serif;
+        }
+
+        .table {
+            display: table;
+        }
+
+        .tr {
+            display: table-row;
+        }
+
+        .td, .th {
+            display: table-cell;
+        }
+
+        .rowspan {
+            border-top-width: 0px !important;
+            border-bottom-width: 0px !important;
+        }
+
+        .colspan {
+            border-right-width: 0px !important;
+            border-left-width: 0px !important;
+        }
+
+        .table, .th, .td {
+            border: 1px solid #dEE2E6;
+            border-collapse: collapse;
+        }
+
+        .table {
+            border-width: 2px;
+            width: 50vw;
+        }
+
+        .th, .td {
+            padding: 7px;
+            text-align: center;
+        }
+
+        .tr>.th:nth-child(n + 3) {
+            font-weight: normal;
+        }
+
+        .tr>.td:nth-child(2) {
+            white-space: nowrap;
+        }
+
+        .tr>.td:nth-child(n + 3) {
+            width: 50%;
+        }
+
+        .tr>.td:nth-child(3) {
+            color: #659EC4;
+        }
+
+        .tr>.td.colspan:nth-child(3) {
+            color: black;
+        }
+        
+        .tr>.td:nth-child(4) {
+            color: #446e9b;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="table">
+        <div class="tr">
+            <div class="th rowspan">ЧТ</div>
+            <div class="th">Время</div>
+            <div class="th" style="background-color: #B7D7EC;">ЧС</div>
+            <div class="th" style="background-color: #597EA7; color: white;">ЗН</div>
+        </div>
+        <div class="tr">
+            <div class="td rowspan"></div>
+            <div class="td">08:30 - 10:05</div>
+            <div class="td"></div>
+            <div class="td"></div>
+        </div>
+        <div class="tr">
+            <div class="td rowspan"></div>
+            <div class="td">10:15 - 11:50</div>
+            <div class="td"></div>
+            <div class="td"></div>
+        </div>
+        <div class="tr">
+            <div class="td rowspan"></div>
+            <div class="td">12:00 - 13:35</div>
+            <div class="td"></div>
+            <div class="td">(лек) Правоведение 218л</div>
+        </div>
+        <div class="tr">
+            <div class="td rowspan"></div>
+            <div class="td">13:50 - 15:25</div>
+            <div class="td colspan">(лек) Базы данных 218л Фомин М. М.</div>
+            <div class="td colspan"></div>
+        </div>
+        <div class="tr">
+            <div class="td rowspan"></div>
+            <div class="td">15:40 - 17:15</div>
+            <div class="td">(лек) Теория вероятностей и математическая статистика 218л Горяинов В. Б.</div>
+            <div class="td"></div>
+        </div>
+        <div class="tr">
+            <div class="td rowspan"></div>
+            <div class="td">17:25 - 19:00</div>
+            <div class="td colspan">(сем) Правоведение 739л</div>
+            <div class="td colspan"></div>
+        </div>
+        <div class="tr">
+            <div class="td rowspan"></div>
+            <div class="td">19:10 - 20:45</div>
+            <div class="td colspan">(сем) Иностранный язык каф. Л2</div>
+            <div class="td colspan"></div>
+        </div>
+    </div>
+</body>
+
+</html>

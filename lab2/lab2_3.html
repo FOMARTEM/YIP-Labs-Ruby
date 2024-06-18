@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICS6 Bootstrap</title>
+    <link href="bootstrap.min.css"
+        rel="stylesheet">
+    <style>
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+
+        body {
+            margin-bottom: 40px;
+        }
+
+        main {
+            margin-top: 15px;
+        }
+
+        footer {
+            height: 40px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .my-primary {
+            background-color: #c36eb3;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark my-primary">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#text">Text</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="row">
+            <div class="col-4">
+                <img src="avatar.png"
+                    alt="avatar" width="1000" height="400">
+            </div>
+            <div class="col-8">
+                <p>Любой текст</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+                <form>
+                    <table>
+                        <tr>
+                            <td>
+                                Введите имя:
+                            </td>
+                            <td>
+                                <input type="text" name="name" placeholder="Введите имя">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Введите фамилию:
+                            </td>
+                            <td>
+                                <input type="text" name="surname" placeholder="Введите фамилию">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Введите логин:
+                            </td>
+                            <td>
+                                <input type="text" name="login" placeholder="Введите логин" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Введите пароль:
+
+                            </td>
+                            <td>
+                                <input type="password" name="password" placeholder="Ведите пароль" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Выберите пол:
+                            </td>
+                            <td>
+                                <label><input type="radio" name="sex" value="M">Мужской</label>
+                                <label><input type="radio" name="sex" value="F">Женский</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="submit" value="Регистрация" style="width: 100%;" class="btn-primary">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div class="col-4">
+                <table class="table table-bordered">
+                    <tr>
+                        <th rowspan="8" style="vertical-align: top;">ЧТ</th>
+                        <th>Время</th>
+                        <th style="background-color: #B7D7EC;">ЧС</th>
+                        <th style="background-color: #597EA7; color: white;">ЗН</th>
+                    </tr>
+                    <tr>
+                        <td>08:30 - 10:05</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>10:15 - 11:50</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>12:00 - 13:35</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>13:50 - 15:25</td>
+                        <td colspan="2">(лек) Базы данных 218л Фомин М. М.</td>
+                    </tr>
+                    <tr>
+                        <td>15:40 - 17:15</td>
+                        <td>(лек) Теория вероятностей и математическая статистика 218л Горяинов В. Б.</td>
+                        <td>(лек) Правоведение 218л</td>
+                    </tr>
+                    <tr>
+                        <td>17:25 - 19:00</td>
+                        <td colspan="2">(сем) Правоведение 739л</td>
+                    </tr>
+                    <tr>
+                        <td>19:10 - 20:45</td>
+                        <td colspan="2">(сем) Иностранный язык каф. Л2</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" id="text">
+                <div>
+                    <h1>Sony α6400</h1>
+                    <samp>Sony α6400</samp> – <em>беззеркальная камера</em> с сенсором формата <strong>APS-C</strong> разрешением <em>24</em> мегапикселя. 
+                    По своим основным характеристикам камера не сильно отличается от моделей <mark>Sony</mark> α6500 и <mark>Sony</mark> α6300, однако изменения есть,
+                    и главное из них — усовершенствованная система автофокуса. Производитель делает акцент на возможностях отслеживания объектов в реальном времени,
+                    что актуально при съемке динамики: детей, животных, спортивных соревнований, танцев и тому подобного. 
+                    Особенно выделяется фокусировка по глазам в реальном времени: камера определяет глаза модели в кадре,
+                    причем при необходимости фотограф может задать фокусировку конкретно по правому или левому глазу. 
+                    Система – гибридная, включающая <em>425</em> фазовых точек фокусировки и <em>165</em> контрастных. И это не технология,
+                    перенесенная, как часто бывает, со старших моделей, эта система именно что дебютирует на <samp>Sony α6400</samp>,
+                    и только в будущем можно ждать ее появления на других камерах <mark>Sony</mark>.
+                    <br /><br />
+                    <small>Камера - устройство для регистрации неподвижных изображений </small>
+                    <br /><br />
+                    Помимо этого, у новинки шире диапазон светочувствительности – ISO <s>50</s> <em>100-102400</em>.
+                    Она немного легче своих «ближайших родственников» и чуть дольше держит заряд.
+                    <br /><br />
+                    Компания <mark>Sony</mark> заявляет, что в новинке используются алгоритмы изображений от полнокадровых камер компании,
+                    которые обеспечивают более реалистичную цветопередачу в <strong>JPEG</strong> – в частности, качественную работу с цветом кожи.
+                    Значительное внимание уделено и работе с видео: доступна запись <strong>4K-видео</strong> в высоком разрешении, съемка в <strong>HDR (HLG)</strong>,
+                    замедленная и ускоренная съемка, съемка таймлапсов и другие фишки. 
+                    <br /><br />
+                    <h2>Формула умного человкеа</h2>
+                    <var>e</var> = <var>m</var> * <var>c<sup>2</sup></var>
+                    <br /><br />
+                    <h3>Формула напитка</h3>
+                    C<sub>2</sub>H<sub>5</sub>OH
+                    <br /><br />
+                    <h4>Примеры с кодом</h4>
+                    <p>Метод <code>push()</code> добавляет элемент</p>
+                    <pre>
+                    <code>
+                    #include &lt;stdio.h&gt;<br/>
+                    int main (void)<br/>
+                    {<br/>
+                        puts("Hello, World!");<br/>
+                        return 0;<br/>
+                    }
+                    </code> 
+                    </pre>
+                    <h5>Вывод кода</h5>
+                    <pre>
+                    <samp>Hello, World!</samp>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="my-primary">
+        <div class="container">
+            <p class="footer-text">Footer</p>
+        </div>
+    </footer>
+</body>
+
+</html>
