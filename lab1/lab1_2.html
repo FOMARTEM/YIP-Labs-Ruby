@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        Lab 1.2
+    </title>
+    <!--
+        стиль:
+        Шрифт как в лкс
+        колапс объединяет границы ячеек
+        толщина в 2 пикселя и ширина в 50%
+        отсупы в 7 пикселей и текст по центру
+        ?
+        в первом столбце текст не переносится
+        со второй ячейки ширина 50% от ширины таблицы
+        цвет текста в ячейках 2 столбца
+        цвет текста если 2 ячейка объденина
+        цвет текста в 3 ячейке
+    -->
+    <style>
+        
+        :root {
+            font-family: sans-serif; 
+        }
+
+        table, th, td {
+            border: 1px solid #dEE2E6;
+            border-collapse: collapse;
+        }
+
+        table {
+            border-width: 2px;
+            width: 50vw;
+        }
+
+        th, td {
+            padding: 7px;
+            text-align: center;
+        }
+
+        tr>th:nth-child(n + 2) {
+            font-weight: normal;
+        }
+
+        tr>td:nth-child(1) {
+            white-space: nowrap;
+        }
+
+        tr>td:nth-child(n + 2) {
+            width: 50%;
+        }
+
+        tr>td:nth-child(2) {
+            color: #659EC4;
+        }
+
+        tr>td:nth-child(2)[colspan] {
+            color: black;
+        }
+
+        tr>td:nth-child(3) {
+            color: #446e9b;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th rowspan="8" style="vertical-align: top;">ЧТ</th>
+            <th>Время</th>
+            <th style="background-color: #B7D7EC;">ЧС</th>
+            <th style="background-color: #597EA7; color: white;">ЗН</th>
+        </tr>
+        <tr>
+            <td>08:30 - 10:05</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>10:15 - 11:50</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>12:00 - 13:35</td>
+            <td></td>
+            <td>(лек) Правоведение 218л</td>
+        </tr>
+        <tr>
+            <td>13:50 - 15:25</td>
+            <td colspan="2">(лек) Базы данных 218л Фомин М. М.</td>
+        </tr>
+        <tr>
+            <td>15:40 - 17:15</td>
+            <td>(лек) Теория вероятностей и математическая статистика 218л Горяинов В. Б.</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>17:25 - 19:00</td>
+            <td colspan="2">(сем) Правоведение 739л</td>
+        </tr>
+        <tr>
+            <td>19:10 - 20:45</td>
+            <td colspan="2">(сем) Иностранный язык каф. Л2</td>
+        </tr>
+    </table>
+</body>
+
+</html>
